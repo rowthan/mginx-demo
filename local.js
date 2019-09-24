@@ -9,7 +9,7 @@ module.exports={
       /**
        * MongoDB 连接字符串，当MongoDB服务部署在非宿主机上时，替换 host.docker.internal 为可访问的IP地址
        */
-      mongodb: 'mongodb://host.docker.internal:27017/mginx-test', 
+      mongodb: 'mongodb://e6ce2842ac94f10b.c.cloudtogo.cn:30237/mginx-demo',  // host.docker.internal:27017/mginx-test
   
       /**
        * Redis 键前缀，可自行定义
@@ -19,7 +19,7 @@ module.exports={
       /**
        * Redis 连接串。当 redis 部署在非宿主机上时，替换 host.docker.internal 为可访问IP地址
        */
-      redisConnect: 'redis://host.docker.internal:6379'
+      redisConnect: 'redis://39188a42772f4ab2.c.cloudtogo.cn:30238'
     },
   };
   

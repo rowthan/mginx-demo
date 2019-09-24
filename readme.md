@@ -1,19 +1,18 @@
 ## 前置依赖服务
 使用 mginx 前，你需要提前准备以下服务
 - [ ] Docker 环境。项目采用 Docker 运行，请确保服务器已安装 Docker 环境。
-- [ ] MongoDB 数据库服务。你需要自行启动或已经具备 MongoDB 数据库存储服务。可直接在服务器端安装并启动或使用云数据库。
-- [ ] Redis 服务。你需要自行启动或已经具备 Redis 服务。可直接在服务器端安装并启动或使用云数据库服务。
+- [x] MongoDB 数据库服务。你需要自行启动或已经具备 MongoDB 数据库存储服务。（[loca.js](./local.js) 默认配置了demo数据库，可直接使用）。
+- [x] Redis 服务。你需要自行启动或已经具备 Redis 服务。（[loca.js](./local.js) 默认配置了demo数据库，可直接使用）。
 
 ## 配置
 * 进入 [local.js](./local.js) 根据自身情况对配置文件进行修改。
 
 ## 启动
-
-* 运行以下命令
+* 参考 [run.sh](./run.sh) 修改后，运行 `sh run.sh` （推荐）
+* 或运行以下命令
 ```
 docker run --name mginx -i -p 8888:8888 -v /{current_dir_path}/local.js:/mginx/config/local.js -v /{dir_for_files}/:/mginx-files/  rowthan/mginx
 ```
-或参考 [run.sh](./run.sh) 修改后，运行 `sh run.sh`
 
 其中：
 * `--name mginx` 为对当前启动 docker 别名，你可以自定义  
