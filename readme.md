@@ -26,3 +26,8 @@ docker run --name mginx -i -p 8888:8888 --network host  -v /{current_dir_path}/l
 * `/mginx/config/local.js` 是 `mginx` 内部配置文件的存放地址，此处不可更改
 * `{dir_for_files}` 指 `mginx` 内对于静态文件持久化存储的地址，你需要保证本机上该路径存在且可访问
 * `/mginx-files/` 指在 `mginx` 系统对持久化存储文件夹的别名，对应 `[local.js](./local.js)` 中 `staticDirPath` 配置。 
+
+## API
+> 根据提供的 API，可以结合CI，集成自动化部署方案。例如：1、push 代码后，CI 对前端代码进行打包`dist`，并通过 SSH 通道，将`dist`传送至`mginx-files`路径下。2、调用接口获取一组默认代理方案数据，修改静态文件路径为`dist`。3、调用接口创建一组代理方案。至此，实现随代码提交而生成测试环境。
+* `GET` `/mginx/proxy?proxy=[proxyName]`  获取一组代理方案
+* `POST` `/mginx/proxy` 创建一组代理方案
