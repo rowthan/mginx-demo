@@ -17,7 +17,7 @@ module.exports={
       redisConnect: 'redis://39188a42772f4ab2.c.cloudtogo.cn:30238'
     },
     /**
-     * 代理方案标识参数key，默认根据URL goto=代理方案名称 来区别代理分发，标识符可自定义
+     * 代理方案标识参数key，默认根据URL goto=代理方案名称 来区别代理分发，标识符可自定义，不同的goto参数可以认为是不同的服务环境
      * */
     proxyParam: 'goto',
     /**
