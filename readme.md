@@ -1,5 +1,6 @@
-## 预览
-[mginx demo](http://9461a0e3c49c60c2.c.cloudtogo.cn:30241/mginx/signup)
+## 预览&试用
+[demo环境](http://9461a0e3c49c60c2.c.cloudtogo.cn:30241/mginx/signup)
+![image](https://media.giphy.com/media/ZZlZjsZZbBuegof3m0/giphy.gif)
 
 ## 前置依赖服务
 使用 mginx 前，你需要提前准备以下服务
